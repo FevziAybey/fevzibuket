@@ -715,52 +715,45 @@ window.PROLOGUE = {
 // Uçak sahnesinden sonraki kapanış metni
 window.EPILOGUE = {
   kicker: "Sonra",
-  title: "Zamansız bir ara",
+  title: "Zamansız Bir Ara",
   parts: [
     {
       who: "fb",
-      title: "Uzak mesafe",
+      title: "Uzak Mesafe",
       text: [
-        "Buket Hatay’daydı, Fevzi burada. Aralarına uzak bir mesafe girdi.",
-        "Mesafeyle birlikte iletişim de koptu.",
+        "Buket Hatay’daydı, Fevzi Antalya’da. Aralarına giren mesafe, hayatın kendi koşturmacasıyla birleşti.",
       ],
     },
     {
       who: "fb",
-      title: "Olgunlukla verilen karar",
+      title: "Olgunlukla Verilen Karar",
       text: [
-        "İkisi de birbirini çok seviyordu. Ama bu sürecin o güzel duyguları yıpratacağını, aralarında kırgınlıklara yol açacağını gördüler.",
-        "Büyük bir olgunlukla, ilişkiyi bitirmenin iki taraf için de en iyisi olacağının farkındaydılar.",
-        "Zamansız bir ara verdiler; en azından doğru zaman ve koşullar yeniden olgunlaşıncaya kadar. İlişkiyi bitirdiler.",
-        "Birbirlerini sevmeye devam ettiler.",
+        "İkisi de birbirine değer veriyordu. Ancak sürecin getirdiği zorlukların o güzel hatıraları yıpratmasına izin vermek istemediler.",
+        "Büyük bir olgunlukla, birbirlerinin hayatına ve kararlarına saygı duyarak ilişkiyi en temiz noktasında durdurdular.",
       ],
     },
     {
       who: "fb",
-      title: "4 Ekim, 8 Ekim",
+      title: "4 Ekim & 8 Ekim",
       text: [
-        "4 Ekim’de Fevzi’nin, 8 Ekim’de Buket’in doğum günüydü.",
-        "İkili doğum günlerini kutladılar.",
+        "4 Ekim Fevzi’nin, 8 Ekim ise Buket’in doğum günüydü.",
+        "Aradaki mesafe ve sessizliğe rağmen bu tarihler; birbirlerinin hayatında bıraktıkları güzel izlere duydukları saygının ortak milatları olarak kaldı.",
       ],
     },
     {
       who: "fb",
-      title: "İki ayrı akış",
+      title: "İki Ayrı Akış",
       text: [
-        "Hayatlarına devam etmeleri, başarmaları ve halletmeleri gereken işleri halletmeleri gerektiğini biliyorlardı.",
-        "Kaderin iplikleri artık iki ayrı hayat akışında devam edecekti.",
+        "Şimdi ikisi de kendi yolunda, kendi hedeflerine ve heveslerine odaklanmış durumda.",
+        "İki ayrı hayat akışı devam ediyor; özgür, bağımsız ve olgunca.",
       ],
     },
   ],
-  closing: "Ta ki yeniden bir araya gelinceye kadar.",
   birthdays: { f: "4 Ekim", b: "8 Ekim" },
   message: "Doğum günümüz kutlu olsun",
   note: {
-    to: "Hanımefendi,",
     lines: [
-      "İstediğin zaman arayabilir, mesaj yazabilirsin. İlişkiyi bitirmiş olabiliriz ama bu, buna engel değil.",
-      "Sakın ha üzüleyim deme. Mutlu ol ve bir dilek tut.",
-      "Çünkü ben dileğimi tuttum. Aynı dileği tuttuğumuzu da biliyorum. 😊",
+      "Doğum günün kutlu olsun Buket. Yeni yaşın sana güzellikler, huzur ve bolca şans getirsin. Yüzünün hep güleceği çok güzel bir yıl olsun. 😊",
     ],
     from: "— Fevzi",
   },
@@ -1149,7 +1142,7 @@ window.STORY = [
       root.append(article);
     });
 
-    root.append(el("p", "prologue-closing", data.closing));
+    if (data.closing) root.append(el("p", "prologue-closing", data.closing));
   }
 
   function renderEnding() {
@@ -1165,7 +1158,7 @@ window.STORY = [
     root.append(side("f"), el("p", "bday-message", message), side("b"));
 
     const letter = el("article", "part note");
-    letter.append(el("p", "note-to", note.to));
+    if (note.to) letter.append(el("p", "note-to", note.to));
     note.lines.forEach((line) => letter.append(el("p", "", line)));
     letter.append(el("p", "note-from", note.from));
     root.append(letter);
