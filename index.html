@@ -106,10 +106,38 @@ body {
 }
 
 .hero-lead {
-  margin: 0.4rem 0 1.4rem;
-  max-width: 30rem;
+  margin: 0.4rem 0 0.6rem;
+  max-width: 34rem;
   color: var(--prose);
   font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.hero-quote {
+  margin: 0 0 1.6rem;
+  max-width: 30rem;
+  padding: 0.9rem 0 0;
+  border-top: 1px solid rgba(208, 44, 66, 0.45);
+}
+
+.hero-quote p {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.hero-quote cite {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--thread);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .hero-cta {
@@ -590,7 +618,14 @@ body {
   <header class="hero">
     <p class="hero-kicker">kader iplikleri</p>
     <h1>Buket <span class="amp">&</span> Fevzi</h1>
-    <p class="hero-lead">İki ayrı yol. Onları birbirine bağlayan kırmızı bir iplik.</p>
+    <p class="hero-lead">
+      İki ayrı hayat, iki ayrı kader ipliği. Her biri kendi yolunda ilerliyordu; ta ki bir gün aynı noktada kesişene dek.
+      O kesişmeden kısa ama ahenkli bir aşk doğdu.
+    </p>
+    <blockquote class="hero-quote">
+      <p>“İki kişiliğin karşılaşması, iki kimyasal maddenin teması gibidir: Eğer bir tepkime olursa, her ikisi de dönüşür.”</p>
+      <cite>Carl Gustav Jung</cite>
+    </blockquote>
     <button type="button" class="hero-cta" id="start-btn">İpliği takip et</button>
   </header>
 
@@ -650,15 +685,25 @@ window.PROLOGUE = {
       title: "Fevzi’nin fark edişi",
       text: [
         "Fevzi bunların hiçbirinden haberdar değildi.",
-        "Onu gerçekten ilk kez, Buket bütün bunları ona anlattığında fark etti: sabahları onu nasıl gördüğünü, iki hafta boyunca nasıl aradığını, gittiğini sanıp nasıl üzüldüğünü.",
-        "Buket mahallede yeni bir yüzdü. Buna rağmen onu bu kadar dikkatle takip eden, bu kadar ayrıntıyı aklında tutan birini ilk kez görüyordu. İlgisini çeken de buydu.",
+        "Buket ilgisini ona ilk kez gösterip bütün bunları anlattığında onu gerçekten fark etti: sabahları onu nasıl gördüğünü, iki hafta boyunca nasıl aradığını, gittiğini sanıp nasıl üzüldüğünü. Bu, Fevzi’nin de ilgisini ona doğru çekti.",
+        "Buket, durakta da birbirlerini gördüklerini söyledi. Fevzi bunu hatırlamıyordu. Bunun için tatlı bir trip yedi.",
+      ],
+    },
+    {
+      who: "f",
+      title: "Önce dikkati",
+      text: [
+        "Buket onun için mahallede yeni biriydi. Yeni olmasına rağmen ona bu kadar dikkat eden, onu bu kadar takip eden biri hiç olmamıştı. Üstelik ilgisini açıkça gösteriyordu.",
+        "Onda ilk hoşuna giden bu dikkatiydi. Sonra zekâsı, sonra birbirine tıpatıp benzeyen kişilikleri. Sonunda her şeyine âşık oldu.",
+        "Ama onu tam tanıyana kadar hep mesafeli duran taraf kendisi oldu.",
       ],
     },
     {
       who: "fb",
       title: "Yirmi beş",
       text: [
-        "Bir ara Buket yaşını sordu. Onu on sekiz, on dokuz yaşında sanmıştı.",
+        "Bir gün Buket ona yaşını sordu. Fevzi yaşından çok daha küçük gösteriyordu; Buket onu on sekiz, on dokuz yaşında sanıyordu.",
+        "İçten içe endişeleniyordu: “Ben kendimden küçük birinden mi hoşlanıyorum?”",
         "— Yirmi beş, dedi Fevzi.",
         "Buket’in içi rahatladı.",
       ],
